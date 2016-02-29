@@ -1,5 +1,9 @@
 # priceminister-mdc
 
+### Prerequisite
+
+NPM installed (download it from here https://www.npmjs.com/package/npm )
+
 ###Installation guide :
 
 Project initialisation :
