@@ -68,14 +68,11 @@ class ProductPageDetailComponent extends React.Component {
   }
 
   render() {
+    let product = this.state.product;
     return <div>
       <p>Mettre dans ProductPageDetailComponent.render() le contenu de la page</p>
-      <ProductTitleComponent product={this.getProduct().bind(this)}/>
+      <ProductTitleComponent product={product}/>
     </div>;
-  }
-
-  getProduct() {
-    return this.state.product;
   }
 
   getFakeAnswer() {

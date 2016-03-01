@@ -12,9 +12,9 @@ class ProductTitleComponent extends React.Component {
   render() {
     return <div><p>ProductTitleComponent :
     <ul>
-      <li>Titre : </li>
-      <li>Note : </li>
-      <li>Nombre de reviews : </li>
+      <li>Titre : {this.props.product.headline}</li>
+      <li>Note : {this.props.product.productNote}</li>
+      <li>Nombre de reviews : {this.props.product.nbReviews}</li>
     </ul>
     </p></div>
   }
