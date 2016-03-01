@@ -19,7 +19,7 @@ class ProductPageDetailComponent extends React.Component {
 
 
   componentWillMount() {
-    var baseUrl = 'http://ws.priceminister.com/rest/product/v1/get';
+    // var baseUrl = 'http://ws.priceminister.com/rest/product/v1/get';
     // $.ajaxSetup({
     //   beforeSend: function(request) {
     //     request.setRequestHeader("User-Agent","HACKATHON Q1.2016");
@@ -42,30 +42,29 @@ class ProductPageDetailComponent extends React.Component {
     //      },
     // });
 
-    ajax.get(`${baseUrl}?advertType=NEW&productId=${this.props.productId}&channel=hackathon&loadProductDetails=true`)
-        .set({
-          'User-Agent': 'HACKATHON Q1.2016',
-          jsonp: 'refreshSection',
-          dataType: "jsonp"
-        })
-        .withCredentials()
-        .end((error, response) => {
+    // ajax.get(`${baseUrl}?advertType=NEW&productId=${this.props.productId}&channel=hackathon&loadProductDetails=true`)
+    //     .set({
+    //       'User-Agent': 'HACKATHON Q1.2016',
+    //       jsonp: 'refreshSection',
+    //       dataType: "jsonp"
+    //     })
+    //     .withCredentials()
+    //     .end((error, response) => {
             // if (!error && response) {
             //     var response
             // } else {
             //     console.log(error);
             // }
-
-            // TODO : Appeler le WS à la place de getFakeAnswer !
-            var result = this.getFakeAnswer().result;
-            this.state.product = {
-              "id" : result.id,
-              "headline" : result.headline,
-              "productNote" : result.reviewsAverageNote,
-              "nbReviews" : result.nbReviews
-            }
-        }
-    );
+    //     }
+    // );
+    // TODO : Appeler le WS à la place de getFakeAnswer !
+    var result = this.getFakeAnswer().result;
+    this.state.product = {
+      "id" : result.id,
+      "headline" : result.headline,
+      "productNote" : result.reviewsAverageNote,
+      "nbReviews" : result.nbReviews
+    }
   }
 
   render() {
