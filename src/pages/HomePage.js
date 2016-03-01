@@ -13,6 +13,4 @@ class HomePage extends React.Component {
   }
 }
 
-// Test 222
-
 export default HomePage;
