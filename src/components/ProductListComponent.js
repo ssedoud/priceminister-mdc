@@ -2,6 +2,7 @@ import React from 'react';
 import ajax from 'superagent';
 import jsonp from 'superagent-jsonp';
 import $ from 'jquery';
+import { Link } from 'react-router';
 
 class ProductListComponent extends React.Component {
 
@@ -59,8 +60,10 @@ class ProductListComponent extends React.Component {
                     return (<div className="product-box">
                               <div className="row">
                                 <div className="col-md-3">
-                                  <img src="http://pmcdn.priceminister.com/photo/The-Division-1062158383_L.jpg" width = "170" heigth= "170"
-                                    className="img-responsive center-block" alt="Responsive image"/>
+                                  <Link to="/product/113097659">
+                                    <img src="http://pmcdn.priceminister.com/photo/The-Division-1062158383_L.jpg" width = "170" heigth= "170"
+                                      className="img-responsive center-block" alt="Responsive image"/>
+                                  </Link>
                                 </div>
                                 <div className="col-md-5"> <a href = "#" className="title"> products</a> <br/>
                                   <span href = "#" className="glyphicon glyphicon-star yellow"> </span>
