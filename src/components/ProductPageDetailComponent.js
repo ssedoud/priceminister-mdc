@@ -5,6 +5,7 @@ import $ from 'jquery';
 import ProductTitleComponent from './ProductTitleComponent';
 import ProductDataComponent from './ProductDataComponent';
 import ProductBuyBoxComponent from './ProductBuyBoxComponent';
+import ProductOtherAdvertsComponent from './productPage/ProductOtherAdvertsComponent';
 
 class ProductPageDetailComponent extends React.Component {
   constructor(props) {
@@ -41,7 +42,9 @@ class ProductPageDetailComponent extends React.Component {
                     "isMevFormAvailable" : response.body.result.isMevFormAvailable,
                     "newBestPrice" : response.body.result.newBestPrice,
                     "usedBestPrice" : response.body.result.usedBestPrice,
-                    "bestOffers" : response.body.result.bestOffers
+                    "bestOffers" : response.body.result.bestOffers,
+                    "nbAdverts" : response.body.result.advertsCount,
+                    "adverts" : response.body.result.adverts
                   }
                 });
             } else {
@@ -61,7 +64,9 @@ class ProductPageDetailComponent extends React.Component {
                     "isMevFormAvailable" : response.result.isMevFormAvailable,
                     "newBestPrice" : response.result.newBestPrice,
                     "usedBestPrice" : response.result.usedBestPrice,
-                    "bestOffers" : response.result.bestOffers
+                    "bestOffers" : response.result.bestOffers,
+                    "nbAdverts" : response.body.result.advertsCount,
+                    "adverts" : response.body.result.adverts
                   }
                 });
             }
@@ -71,8 +76,10 @@ class ProductPageDetailComponent extends React.Component {
 
   // Mettre dans ProductPageDetailComponent.render() le contenu de la page
   render() {
-    console.log(this.state);
-    return  <div className="row">
+    console.log("Parent");
+    console.log(this.state.product);
+    return <div>
+            <div className="row">
               <div className="col-md-12">
                 <div className="product-box">
                   <ProductTitleComponent product={this.state.product}/>
@@ -82,7 +89,18 @@ class ProductPageDetailComponent extends React.Component {
                   </div>
                 </div>
               </div>
+            </div>
+            {this.renderProductAdverts()}
             </div>;
+  }
+
+  renderProductAdverts() {
+    if (!this.state.product || this.state.product.nbAdverts === 0) {
+      return "";
+    }
+    else {
+      return <ProductOtherAdvertsComponent product={this.state.product}/>
+    }
   }
 
   getFakeResponse() {
