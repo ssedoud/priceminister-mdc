@@ -26,7 +26,7 @@ class ProductListDetailComponent extends React.Component {
                    <a className="price" href="#" > 69,99 € </a>  Comme Neuf <br/>
                    <a className="shipping" href="#"> + 2,90 € (frais de port) </a>
                    <br/><br/>
-                   <button className="btn btn-primary btn-sm purchaseBtn"><span className="glyphicon glyphicon-shopping-cart"> </span> Ajouter au panier</button>
+                   <button className="btn btn-default btn-sm bkColorPM"><span className="glyphicon glyphicon-shopping-cart"> </span> Ajouter au panier</button>
                    <br/><br/>
                    <span className="sellerSummary">Voir tous les vendeurs</span> <br/>
                    <span className="offerSummary"> 21 neufs dès </span>
