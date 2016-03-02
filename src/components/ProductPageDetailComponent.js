@@ -4,6 +4,7 @@ import $ from 'jquery';
 
 import ProductTitleComponent from './ProductTitleComponent';
 import ProductDataComponent from './ProductDataComponent';
+import ProductBuyBoxComponent from './ProductBuyBoxComponent';
 
 class ProductPageDetailComponent extends React.Component {
   constructor(props) {
@@ -53,6 +54,7 @@ class ProductPageDetailComponent extends React.Component {
                 <div className="product-box">
                   <ProductTitleComponent product={this.state.product}/>
                   <ProductDataComponent product={this.state.product}/>
+                  <ProductBuyBoxComponent product={this.state.product}/>
                 </div>
               </div>
             </div>;
