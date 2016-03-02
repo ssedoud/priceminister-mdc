@@ -12,6 +12,13 @@ html,body {
   margin: 0 auto;
 }
 
+.text-footer-box {
+  padding-top: 30px;
+}
+.footer-box {
+  background-color: white;
+  margin-top: 10px;
+}
 .summary-table {
   color : #989898;
   font-size: 12px;
@@ -98,7 +105,21 @@ html,body {
     display: none;
   }
 
+  .hidden-mobile{
+    display: none;
+  }
 }
+@media screen and (min-width:980px) {
+  .hidden-desktop{
+    display: none;
+  }
+
+}
+
+.next-product {
+  margin: 25px;
+}
+
 
 @media screen and (max-width: 980px) {
   .product-box {
@@ -131,6 +152,7 @@ html,body {
   background-color: rgb(255,188,99);
   opacity: 0.90;
 }
+
 .product-box {
   background-color: white;
   padding-top: 25px;
