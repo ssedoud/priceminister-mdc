@@ -10,7 +10,7 @@ const routes = (
     <Route path="/" component={ PriceMinister }>
         <IndexRoute component={ HomePage } />
         <Route path="product/:productId" component={ ProductPage } />
-        <Route path="productList/:keyWord" component={ ProductListPage } />
+        <Route path="productList/:searchKeyword" component={ ProductListPage } />
     </Route>
 );
 

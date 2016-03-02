@@ -13,12 +13,22 @@ class ProductListComponent extends React.Component {
   }
 
    componentWillMount() {
-     var keyword = 'iphone'
-     var pageNumber = 1
+     var keyword = this.props.keyword;
+     var pageNumber = this.props.pageNumber;
      var baseUrl = 'http://ws.sse-deb-dev.priceminister.lan/rest/navigation/v1/list?'
+
+     var keywordParam = '';
+     if(keyword != undefined){
+       keywordParam =`&kw=${keyword}`;
+     }
+
+     var pageParam = 1;
+     if(pageNumber != undefined){
+       pageParam = `&pageNumber=${pageNumber}`;
+     }
      ajax
-     .get(`${baseUrl}kw=${keyword}&pageNumber=${pageNumber}&channel=hackathon`)
-      .set('User-Agent', "some spoofed agent")
+     .get(`${baseUrl}channel=hackathon${keywordParam}${pageParam}`)
+      // .set('User-Agent', "some spoofed agent")
          .end((error, response) => {
              if (!error && response) {
                  this.setState({ productItemList : response.body['result'].products });
