@@ -24,6 +24,7 @@ class ProductListDetailComponent extends React.Component {
                    <ScoreComponent
                    score={this.props.product.reviewsAverageNote}
                    reviewCount={this.props.product.nbReviews}/>
+                   <br/>
                    <span className="selling" ><button className="btn btn-default btn-sm">Vendez le vôtre</button><br/><br/></span>
                 </div>
 
