@@ -5,18 +5,15 @@ class ProductTitleComponent extends React.Component {
       super(props);
   }
 
-  componentWillMount() {
-    console.log(this.props);
-  }
-
   render() {
-    return <div><p>ProductTitleComponent :
-    <ul>
-      <li>Titre : {this.props.product.headline}</li>
-      <li>Note : {this.props.product.productNote}</li>
-      <li>Nombre de reviews : {this.props.product.nbReviews}</li>
-    </ul>
-    </p></div>
+    console.log(this.props);
+    return <div><p>ProductTitleComponent :</p>
+      <ul>
+        <li>Titre : {this.props.product.headline}</li>
+        <li>Note : {this.props.product.productNote}</li>
+        <li>Nombre de reviews : {this.props.product.nbReviews}</li>
+      </ul>
+    </div>
   }
 }
 
