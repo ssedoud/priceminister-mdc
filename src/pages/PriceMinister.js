@@ -16,9 +16,6 @@ handle(){
               <MenuComponent/>
               {this.props.children}
             </div>
-            <button className="btn btn-default bkColorPM" type="button" onClick={this.handle.bind(this)} >
-              <span className="glyphicon glyphicon-search"></span>
-            </button>
           </div> ;
   }
 }
