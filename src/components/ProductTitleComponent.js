@@ -6,14 +6,15 @@ class ProductTitleComponent extends React.Component {
   }
 
   render() {
-    console.log(this.props);
-    return <div><p>ProductTitleComponent :</p>
-      <ul>
-        <li>Titre : {this.props.product.headline}</li>
-        <li>Note : {this.props.product.productNote}</li>
-        <li>Nombre de reviews : {this.props.product.nbReviews}</li>
-      </ul>
-    </div>
+    return <div className="product-title-box">
+             <span className="title">{this.props.product.headline}</span>&nbsp;
+             <span className="glyphicon glyphicon-star yellow"> </span>
+             <span className="glyphicon glyphicon-star yellow"> </span>
+             <span className="glyphicon glyphicon-star yellow"> </span>
+             <span className="glyphicon glyphicon-star yellow"> </span>
+             <span className="glyphicon glyphicon-star yellow"> </span>
+             <a href = "#" className = "avis"> ({this.props.product.nbReviews} avis)</a>
+           </div>
   }
 }
 
