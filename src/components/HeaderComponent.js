@@ -55,7 +55,7 @@ this.setState({keyword: e.target.value});
                                </ul>
                             </div>
                             <input type="hidden" name="search_param" value="all" id="search_param"/>
-                            <input type="text" onChange={this.handleTextChange.bind(this)} name="searchBar" placeholder="Rechercher ..."/>
+                            <input id="query" name="query" type="text" className="form-control typeahead" placeholder="Rechercher ..."/>
                             <span className="input-group-btn">
                             <button className="btn btn-default bkColorPM"  onClick={this.handleSearchClick.bind(this)}  type="button" >
                               <span className="glyphicon glyphicon-search"></span>

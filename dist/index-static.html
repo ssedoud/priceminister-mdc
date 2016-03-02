@@ -22,8 +22,8 @@
       <img src="img/logo-price-minister-rakuten-group.png"
       class="img-responsive center-block" alt="Responsive image">
       </div><!--
-    --><div class="col-md-3 vcenter">
-      <div class="input-group container">
+    --><div class="col-md-6 vcenter">
+      <div class="input-group">
       <div class="input-group-btn search-panel">
 
       <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
@@ -51,7 +51,7 @@
       </ul>
       </div>
       <input type="hidden" name="search_param" value="all" id="search_param">
-      <input id="search-input" type="text" class="form-control typeahead" name="x" placeholder="Rechercher ...">
+      <input id="query" name="query" type="text" class="form-control typeahead" name="searchBar" placeholder="Rechercher ...">
       <span class="input-group-btn">
       <button class="btn btn-default bkColorPM" type="button"><span class="glyphicon glyphicon-search"></span></button>
       </span>
@@ -364,21 +364,7 @@ class="img-responsive center-block" alt="imagesUrls">
 <script src="bootstrap.min.js" ></script>
 <script src="typeahead.js" ></script>
 
-<script>
-$(function(){
 
-      // applied typeahead to the text input box
-      $('#search-input').typeahead({
-        name: 'countries',
-
-        // data source
-        prefetch: 'data/product.json',
-
-        // max item numbers list in the dropdown
-        limit: 10
-      });
-
-    });</script>
 
 <!-- Latest compiled and minified JavaScript -->
 </body>

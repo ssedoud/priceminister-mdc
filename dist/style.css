@@ -2,79 +2,52 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700");
 @import url("https://fonts.googleapis.com/css?family=Roboto:400,300,500,700");
 
-.container {
-  max-width:500px;
-  margin-top:15px;
-  margin-left:10px;
-  font-family: "Roboto","Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 15px;
-  color: #333;
+.twitter-typeahead{
+width:100%;
 }
 
-/* custom styles for the typeahead */
 
 .tt-dropdown-menu {
-  text-align: left;
-}
-
-.typeahead,
-.tt-query,
-.tt-hint {
-  width: 396px;
-  padding: 8px 12px;
-  font-size: 18px;
-  border: 2px solid #ccc;
-  -webkit-border-radius: 8px;
-     -moz-border-radius: 8px;
-          border-radius: 8px;
-  outline: none;
-}
-
-.typeahead {
-  background-color: #fff;
-}
-
-.typeahead:focus {
-  border: 2px solid #0097cf;
-}
-
-.tt-query {
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-     -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-}
-
-.tt-hint {
-  color: #999
-}
-
-.tt-dropdown-menu {
-  width: 422px;
-  margin-top: 12px;
-  padding: 8px 0;
+  min-width: 160px;
+  padding: 5px 0;
   background-color: #fff;
   border: 1px solid #ccc;
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  -webkit-border-radius: 8px;
-     -moz-border-radius: 8px;
-          border-radius: 8px;
+  border: 1px solid rgba(0,0,0,.2);
+  *border-right-width: 0px;
+  *border-bottom-width: 0px;
+  -webkit-border-radius: 0px;
+     -moz-border-radius: 0px;
+          border-radius: 0px;
   -webkit-box-shadow: 0 5px 10px rgba(0,0,0,.2);
      -moz-box-shadow: 0 5px 10px rgba(0,0,0,.2);
           box-shadow: 0 5px 10px rgba(0,0,0,.2);
+  -webkit-background-clip: padding-box;
+     -moz-background-clip: padding;
+          background-clip: padding-box;
+  width:100%;
 }
 
 .tt-suggestion {
+  display: block;
   padding: 3px 20px;
-  font-size: 18px;
-  line-height: 24px;
 }
 
 .tt-suggestion.tt-is-under-cursor {
   color: #fff;
-  background-color: #0097cf;
-
+  background-color: #eee;
+  background-image: -moz-linear-gradient(top, #0088cc, #0077b3);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#0088cc), to(#0077b3));
+  background-image: -webkit-linear-gradient(top, #0088cc, #0077b3);
+  background-image: -o-linear-gradient(top, #0088cc, #0077b3);
+  background-image: linear-gradient(to bottom, #0088cc, #0077b3);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff0088cc', endColorstr='#ff0077b3', GradientType=0)
 }
 
+.tt-suggestion.tt-is-under-cursor {
+  background: #eee;
+  color: #000;
+}
 .tt-suggestion p {
   margin: 0;
 }
