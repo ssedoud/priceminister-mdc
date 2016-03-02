@@ -1,7 +1,13 @@
 import React from 'react';
 
 class HeaderComponent extends React.Component {
+
+handleSearchClick(){
+  this.props.history.replace('/productList/toto');
+}
+
   render(){
+
     return  <div className="row">
                 <div className="header">
                    <div className="row">
@@ -38,7 +44,7 @@ class HeaderComponent extends React.Component {
                             <input type="hidden" name="search_param" value="all" id="search_param"/>
                             <input type="text" className="form-control" name="x" placeholder="Rechercher ..."/>
                             <span className="input-group-btn">
-                            <button className="btn btn-default bkColorPM" type="button">
+                            <button className="btn btn-default bkColorPM"  onClick={this.handleSearchClick.bind(this)}  type="button" >
                               <span className="glyphicon glyphicon-search"></span>
                             </button>
                             </span>
