@@ -8,7 +8,7 @@ class ProductListComponent extends React.Component {
       super(props);
 
       this.state = {
-          products: {}
+          productItemList : []
       };
   }
 
@@ -21,7 +21,7 @@ class ProductListComponent extends React.Component {
       .set('User-Agent', "some spoofed agent")
          .end((error, response) => {
              if (!error && response) {
-                 this.setState({ products: response.body });
+                 this.setState({ productItemList : response.body['result'].products });
              } else {
                  console.log(`Error fetching`, error);
              }
@@ -32,8 +32,14 @@ class ProductListComponent extends React.Component {
 
 
    render() {
+       return (<div>
+         {this.state.productItemList.map((item,index) => {
+              return (
+                <ProductListDetailComponent key={index} product={item}/>
+              );
+          })}
 
-       return (<div><ProductListDetailComponent/></div>);
+         </div>);
    }
 
 
@@ -41,10 +47,3 @@ class ProductListComponent extends React.Component {
 
 
 export default ProductListComponent;
-
-
-// {this.state.products['result']['products'].map((event, index) => {
-    //  return (
-       //<ProductListDetailComponent/>
-    //  );
-//  })}
