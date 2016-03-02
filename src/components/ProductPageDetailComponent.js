@@ -36,7 +36,12 @@ class ProductPageDetailComponent extends React.Component {
                     "headline" : response.body.result.headline,
                     "productNote" : response.body.result.reviewsAverageNote,
                     "nbReviews" : response.body.result.nbReviews,
-                    "imagesUrls" : response.body.result.imagesUrls
+                    "imagesUrls" : response.body.result.imagesUrls,
+                    "isAvailable" : response.body.result.isAvailable,
+                    "isMevFormAvailable" : response.body.result.isMevFormAvailable,
+                    "newBestPrice" : response.body.result.newBestPrice,
+                    "usedBestPrice" : response.body.result.usedBestPrice,
+                    "bestOffers" : response.body.result.bestOffers
                   }
                 });
             } else {
@@ -51,7 +56,12 @@ class ProductPageDetailComponent extends React.Component {
                     "headline" : response.result.headline,
                     "productNote" : response.result.reviewsAverageNote,
                     "nbReviews" : response.result.nbReviews,
-                    "imagesUrls" : response.result.imagesUrls
+                    "imagesUrls" : response.result.imagesUrls,
+                    "isAvailable" : response.result.isAvailable,
+                    "isMevFormAvailable" : response.result.isMevFormAvailable,
+                    "newBestPrice" : response.result.newBestPrice,
+                    "usedBestPrice" : response.result.usedBestPrice,
+                    "bestOffers" : response.result.bestOffers
                   }
                 });
             }
