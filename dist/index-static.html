@@ -7,6 +7,8 @@
         <title>Priceminister</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
         <link rel="stylesheet" href="priceminister.css">
+        <link rel="stylesheet" href="style.css">
+
     </head>
 
     <body>
@@ -21,7 +23,7 @@
       class="img-responsive center-block" alt="Responsive image">
       </div><!--
     --><div class="col-md-3 vcenter">
-      <div class="input-group ">
+      <div class="input-group container">
       <div class="input-group-btn search-panel">
 
       <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
@@ -49,7 +51,7 @@
       </ul>
       </div>
       <input type="hidden" name="search_param" value="all" id="search_param">
-      <input type="text" class="form-control" name="x" placeholder="Rechercher ...">
+      <input id="search-input" type="text" class="form-control typeahead" name="x" placeholder="Rechercher ...">
       <span class="input-group-btn">
       <button class="btn btn-default bkColorPM" type="button"><span class="glyphicon glyphicon-search"></span></button>
       </span>
@@ -317,8 +319,6 @@ class="img-responsive center-block" alt="imagesUrls">
 </div>
 
 
-
-
 </div>
 </div>
 
@@ -362,10 +362,23 @@ class="img-responsive center-block" alt="imagesUrls">
 
 <script type="text/javascript" src="jquery-2.1.1.js"></script>
 <script src="bootstrap.min.js" ></script>
+<script src="typeahead.js" ></script>
 
 <script>
-  $("#zoom_01").elevateZoom();
-</script>
+$(function(){
+
+      // applied typeahead to the text input box
+      $('#search-input').typeahead({
+        name: 'countries',
+
+        // data source
+        prefetch: 'data/product.json',
+
+        // max item numbers list in the dropdown
+        limit: 10
+      });
+
+    });</script>
 
 <!-- Latest compiled and minified JavaScript -->
 </body>
