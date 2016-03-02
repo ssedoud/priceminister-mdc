@@ -66,8 +66,10 @@ class ProductPageDetailComponent extends React.Component {
               <div className="col-md-12">
                 <div className="product-box">
                   <ProductTitleComponent product={this.state.product}/>
-                  <ProductDataComponent product={this.state.product}/>
-                  <ProductBuyBoxComponent product={this.state.product}/>
+                  <div className="row">
+                    <ProductDataComponent product={this.state.product}/>
+                    <ProductBuyBoxComponent product={this.state.product}/>
+                  </div>
                 </div>
               </div>
             </div>;
