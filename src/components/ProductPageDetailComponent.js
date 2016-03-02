@@ -65,8 +65,8 @@ class ProductPageDetailComponent extends React.Component {
                     "newBestPrice" : response.result.newBestPrice,
                     "usedBestPrice" : response.result.usedBestPrice,
                     "bestOffers" : response.result.bestOffers,
-                    "nbAdverts" : response.body.result.advertsCount,
-                    "adverts" : response.body.result.adverts
+                    "nbAdverts" : response.result.advertsCount,
+                    "adverts" : response.result.adverts
                   }
                 });
             }
