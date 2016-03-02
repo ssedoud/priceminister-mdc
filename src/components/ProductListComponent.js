@@ -60,7 +60,7 @@ class ProductListComponent extends React.Component {
                     return (<div className="product-box">
                               <div className="row">
                                 <div className="col-md-3">
-                                  <Link to="/product/113097659">
+                                  <Link to="/product/543772">
                                     <img src="http://pmcdn.priceminister.com/photo/The-Division-1062158383_L.jpg" width = "170" heigth= "170"
                                       className="img-responsive center-block" alt="Responsive image"/>
                                   </Link>
