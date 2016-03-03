@@ -29,7 +29,7 @@ handleTextChange(e){
                    <div className="row">
                       <div className="col-md-3 vcenter">
                          <img src="http://www.accengage.com/wp-content/uploads/2014/09/logo-price-minister-rakuten-group.png"
-                            className="img-responsive center-block" alt="Responsive image"/>
+                            className="img-responsive center-block image-logo-size-mobile" alt="Responsive image"/>
                       </div>
                       <div className="col-md-6 vcenter">
                          <div className="input-group ">
