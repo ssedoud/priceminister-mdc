@@ -1,5 +1,6 @@
 import React from 'react';
 
+import MenuComponent from '../components/MenuComponent';
 import ProductListComponent from '../components/productList/ProductListComponent';
 import ProductListPaginationComponent from '../components/productList/ProductListPaginationComponent';
 
@@ -20,10 +21,13 @@ class ProductListPage extends React.Component {
 
   render(){
     console.log("ProductListPage  " + this.props.params.searchKeyword + ", " + this.state.pageNumber);
-    return  <div className="col-md-7">
-               <ProductListComponent pageNumber={this.state.pageNumber} keyword={this.props.params.searchKeyword}/>
-               <ProductListPaginationComponent changePageNumber={this.changePageNumber.bind(this)} currentPageNumber={this.state.pageNumber}/>
-            </div>;
+    return <div>
+      <MenuComponent/>
+      <div className="col-md-7">
+        <ProductListComponent pageNumber={this.state.pageNumber} keyword={this.props.params.searchKeyword}/>
+        <ProductListPaginationComponent changePageNumber={this.changePageNumber.bind(this)} currentPageNumber={this.state.pageNumber}/>
+      </div>
+    </div>;
   }
 }
 

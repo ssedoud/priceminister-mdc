@@ -1,6 +1,5 @@
 import React, { PropTypes } from 'react';
 import HeaderComponent from '../components/HeaderComponent';
-import MenuComponent from '../components/MenuComponent';
 
 class PriceMinister extends React.Component {
 
@@ -13,7 +12,6 @@ handle(){
     return <div id="web-box">
             <HeaderComponent history={this.context.router}/>
             <div className="row">
-              <MenuComponent/>
               {this.props.children}
             </div>
           </div> ;
