@@ -6,15 +6,14 @@ class ProductBuyBoxComponent extends React.Component {
       super(props);
   }
 
-  // TODO : adapter si la bestOffer est à used (new or used)
   renderBestOffer() {
     console.log("renderBestOffer");
-
     var buyBoxAdverts = [];
-    if (this.props.product.bestOffers.new != "undefined") {
+
+    if (typeof this.props.product.bestOffers.new !== 'undefined') {
       buyBoxAdverts = this.props.product.bestOffers.new;
     }
-    else if (this.props.product.bestOffers.used != "undefined") {
+    else if (typeof this.props.product.bestOffers.used !== 'undefined') {
       buyBoxAdverts = this.props.product.bestOffers.used;
     }
 
@@ -58,7 +57,9 @@ class ProductBuyBoxComponent extends React.Component {
   }
 
   render() {
-    if (Object.keys(this.props.product).length === 0 || JSON.stringify(this.props.product) === JSON.stringify({})) {
+    if (Object.keys(this.props.product).length === 0
+     || JSON.stringify(this.props.product) === JSON.stringify({})
+     || typeof this.props.product.bestOffers === 'undefined') {
       return <div className="col-md-7"></div>;
     } else {
       return <div className="col-md-7">
