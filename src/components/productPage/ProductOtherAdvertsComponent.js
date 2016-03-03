@@ -55,14 +55,12 @@ class ProductOtherAdvertsComponent extends React.Component {
     }
     else {
       return <div className="listing-box">
-        <div className="container">
           <h4>{this.props.product.nbAdverts} Vendeur{this.props.product.nbAdverts === 1 ? '' : 's'} pour {this.props.product.headline}</h4><br />
           <table className="table">
             <tbody>
               {this.renderAdvert()}
             </tbody>
           </table>
-        </div>
       </div>;
     }
   }
