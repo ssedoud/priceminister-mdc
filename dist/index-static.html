@@ -6,8 +6,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Priceminister</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+        <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
         <link rel="stylesheet" href="priceminister.css">
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="mfb.css">
 
     </head>
 
@@ -62,17 +64,13 @@ class="img-responsive center-block image-logo-size-mobile" alt="Responsive image
 </div>
 
 <div class="col-md-2 vcenter hidden-mobile">
-  <img src="img/avatar.png" width = "30" heigth= "30"
+  <img src="img/avatar.png" width = "35" heigth= "35"
   class="img-responsive img-circle center-block" alt="Responsive image">
 </div>
 
-
 </div>
 
-
-
 <br class="hidden-desktop"/>
-
 
 </div>
 </div>
@@ -367,15 +365,42 @@ Tous les services Rakuten :  Allemagne - Autriche - Brésil - Etats-Unis - Espag
 </footer>
 
 
+    <ul id="menu" class="mfb-component--br mfb-zoomin hidden-desktop" data-mfb-toggle="hover">
+      <li class="mfb-component__wrap">
+        <a href="#" class="mfb-component__button--main">
+          <i class="mfb-component__main-icon--resting ion-plus-round"></i>
+          <i class="mfb-component__main-icon--active ion-close-round"></i>
+        </a>
+        <ul class="mfb-component__list">
+          <li>
+            <a href="#" data-mfb-label="Mettre en vendre en 3 clics" class="mfb-component__button--child">
+              <b><span class="mfb-component__child-icon" style="font-size:12px">Vendre</span></b>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" data-mfb-label="Mon compte" class="mfb-component__button--child">
+              <span class="mfb-component__child-icon  glyphicon glyphicon-user"> </span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" data-mfb-label="Mon panier" class="mfb-component__button--child">
+              <span class="mfb-component__child-icon  glyphicon glyphicon-shopping-cart"> </span>
+            </a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+
 </div>
 
 <script type="text/javascript" src="jquery-2.1.1.js"></script>
 <script src="bootstrap.min.js" ></script>
 <script src="typeahead.js" ></script>
+<script src="mfb.js"></script>
 
-
-
-<!-- Latest compiled and minified JavaScript -->
 </body>
 
 </html>

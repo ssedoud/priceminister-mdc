@@ -12,6 +12,9 @@ html,body {
   margin: 0 auto;
 }
 
+.size13 {
+  font-weight: 200;
+}
 
 .text-footer-box {
   padding-top: 30px;
