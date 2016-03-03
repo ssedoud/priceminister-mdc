@@ -24,6 +24,7 @@ handleTextChange(e){
   render(){
 
     return  <div className="row">
+              <div className="col-md-12">
                 <div className="header">
                    <div className="row">
                       <div className="col-md-3 vcenter">
@@ -67,7 +68,8 @@ handleTextChange(e){
                       </div>
                    </div>
                 </div>
-             </div>;
+              </div>
+            </div>;
   }
 }
 

@@ -7,7 +7,6 @@ class HomePage extends React.Component {
   render(){
     return  <div className="col-md-7">
               <CarouselComponent/>
-              <br/>
               <ProductListComponent/>
             </div> ;
   }
