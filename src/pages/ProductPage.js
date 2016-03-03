@@ -4,7 +4,7 @@ import ProductPageDetailComponent from '../components/productPage/ProductPageDet
 
 class ProductPage extends React.Component {
   render(){
-    return  <ProductPageDetailComponent productId={this.props.params.productId} />;
+    return <ProductPageDetailComponent productId={this.props.params.productId} />;
   }
 }
 
