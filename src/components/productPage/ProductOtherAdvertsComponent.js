@@ -1,4 +1,5 @@
 import React from 'react';
+import QualityComponent from '../common/QualityComponent';
 
 class ProductOtherAdvertsComponent extends React.Component {
 
@@ -9,29 +10,12 @@ class ProductOtherAdvertsComponent extends React.Component {
     }
   }
 
-  getQuality(quality) {
-    switch (quality) {
-      case "NEW":
-        return "Neuf";
-      case "LIKE_NEW":
-        return "Comme neuf";
-      case "VERY_GOOD":
-        return "Très bon état";
-      case "GOOD":
-        return "Bon état";
-      case "LIKE_NEW":
-        return "Etat correct";
-      case "OUT_OF_ORDER":
-        return "Hors service";
-    }
-  }
-
   renderAdvert() {
     console.log(this.props.product.adverts);
     return this.props.product.adverts.map((advert) =>
       <tr>
 
-        <td className="col-xs-2"><a className="price" href="#" > {advert.salePrice}€ {this.getQuality(advert.quality)}</a><br />
+        <td className="col-xs-2"><a className="price" href="#" > {advert.salePrice}€ <QualityComponent quality={advert.quality} /></a><br />
         <span className="stock-listing"><span className="glyphicon glyphicon-ok"></span>&nbsp;En stock</span>
         <div className="rsp-box-listing">
         <img src="img/rsp_icon.png" width="20" height="20" alt="rsp"/>
