@@ -1,6 +1,6 @@
 import React from 'react';
 
-import ProductListComponent from '../components/ProductListComponent';
+import ProductListComponent from '../components/productList/ProductListComponent';
 import ProductListPaginationComponent from '../components/productList/ProductListPaginationComponent';
 
 class ProductListPage extends React.Component {

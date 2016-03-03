@@ -1,6 +1,6 @@
 import React from 'react';
 
-import ProductListComponent from '../components/ProductListComponent';
+import ProductListComponent from '../components/productList/ProductListComponent';
 import CarouselComponent from '../components/CarouselComponent';
 
 class HomePage extends React.Component {

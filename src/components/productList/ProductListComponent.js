@@ -1,7 +1,7 @@
 import React from 'react';
 import ajax from 'superagent';
 import ProductListDetailComponent from './ProductListDetailComponent';
-import ProductListPaginationComponent from './productList/ProductListPaginationComponent';
+import ProductListPaginationComponent from './ProductListPaginationComponent';
 
 class ProductListComponent extends React.Component {
 
