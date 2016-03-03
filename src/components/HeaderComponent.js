@@ -67,6 +67,7 @@ handleTextChange(e){
                          </div>
                       </div>
                    </div>
+                   <br className="hidden-desktop"/>
                 </div>
               </div>
             </div>;

@@ -15,7 +15,7 @@ class ProductOtherAdvertsComponent extends React.Component {
     return this.props.product.adverts.map((advert) =>
       <tr>
 
-        <td className="col-xs-2"><a className="price" href="#" > {advert.salePrice}€ <QualityComponent quality={advert.quality} /></a><br />
+        <td className="col-md-2"><a className="price" href="#" > {advert.salePrice}€ <QualityComponent quality={advert.quality} /></a><br />
         <span className="stock-listing"><span className="glyphicon glyphicon-ok"></span>&nbsp;En stock</span>
         <div className="rsp-box-listing">
         <img src="img/rsp_icon.png" width="20" height="20" alt="rsp"/>
@@ -23,7 +23,7 @@ class ProductOtherAdvertsComponent extends React.Component {
         </div>
         </td>
 
-        <td className="col-xs-5">
+        <td className="col-md-5">
         <div className="summary-listing">
         {advert.sellerComment}
         <br /><br />
@@ -32,7 +32,7 @@ class ProductOtherAdvertsComponent extends React.Component {
         </div>
         </td>
 
-        <td className="col-xs-3">
+        <td className="col-md-3">
         <div className="vcenter">
         <span className="center-block"> <a href="#">{advert.seller.login}</a></span>
         {Number((advert.seller.averageScore).toFixed(1))}/5 - {advert.seller.totalSaleCount} Vente{advert.seller.totalSaleCount < 2 ? '' : 's'}
