@@ -5,7 +5,8 @@ class HeaderComponent extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      keyword: ''
+      keyword: '',
+      url:'',
     };
 
   }
@@ -16,7 +17,8 @@ handleSearchClick(){
 }
 
 handleTextChange(e){
-this.setState({keyword: e.target.value});
+  this.setState({keyword: e.target.value});
+  this.setState({url: '/productList/' + e.target.value});
 }
 
   render(){
@@ -55,7 +57,7 @@ this.setState({keyword: e.target.value});
                                </ul>
                             </div>
                             <input type="hidden" name="search_param" value="all" id="search_param"/>
-                            <input id="query" name="query" type="text" className="form-control typeahead" placeholder="Rechercher ..."/>
+                            <input id="query" name="query" type="text" className="form-control" onChange={this.handleTextChange.bind(this)} placeholder="Rechercher ..."/>
                             <span className="input-group-btn">
                             <button className="btn btn-default bkColorPM"  onClick={this.handleSearchClick.bind(this)}  type="button" >
                               <span className="glyphicon glyphicon-search"></span>

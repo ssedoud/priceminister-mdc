@@ -9,17 +9,26 @@ class ProductListDetailComponent extends React.Component {
    render() {
 
      var productLink = "/product/" + this.props.product.id;
+     var productImages = this.props.product.imagesUrls;
+
+     var url = '';
+
+     if(productImages != undefined &&
+                          productImages.length > 0 ){
+       url =
+       <Link to={productLink}>
+          <img src={this.props.product.imagesUrls[0]} width = "170" heigth= "170" className="img-responsive center-block" alt="Responsive image"/>;
+       </Link>;
+     }
 
      return <div className="product-box">
                <div className="row">
                  <div className="col-md-3">
-                   <Link to={productLink}>
-                     <img src={this.props.product.imagesUrls[0]} width = "170" heigth= "170" className="img-responsive center-block" alt="Responsive image"/>
-                   </Link>
+                   {url}
                  </div>
 
                  <div className="col-md-5">
-                   <a href = "#" className="title"> {this.props.product.headline}</a>
+                   <a href = "#" className="title"><Link to={productLink}>{this.props.product.headline}</Link></a>
                    <br/>
                    <div>
                      <ScoreComponent score={this.props.product.reviewsAverageNote}
