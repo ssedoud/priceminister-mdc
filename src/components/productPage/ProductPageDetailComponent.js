@@ -81,7 +81,7 @@ class ProductPageDetailComponent extends React.Component {
     return <div>
             <div className="row">
               <div className="col-md-12">
-                <div className="product-box">
+                <div className="product-box2">
                   <ProductTitleComponent product={this.state.product}/>
                   <div className="row">
                     <ProductDataComponent product={this.state.product}/>

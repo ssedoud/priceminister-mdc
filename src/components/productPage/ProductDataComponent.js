@@ -1,4 +1,5 @@
 import React from 'react';
+import BreadcrumbsComponent from '../common/BreadcrumbsComponent';
 
 class ProductDataComponent extends React.Component {
   constructor(props) {
@@ -33,7 +34,7 @@ class ProductDataComponent extends React.Component {
              </div>
 
              <div className="category">
-               Livres sur l'art et la culture > Livres Art égyptien
+               <BreadcrumbsComponent breadcrumbs={this.props.product.breadcrumbs} />
              </div>
 
              <div>
