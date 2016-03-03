@@ -6,17 +6,34 @@ class ProductDataComponent extends React.Component {
       super(props);
   }
 
+  renderImages() {
+    console.log(this.props.product.imagesUrls);
+
+    if (this.props.product != undefined && this.props.product.imagesUrls != undefined && this.props.product.imagesUrls.length > 0) {
+      return this.props.product.imagesUrls.map((imageUrl) =>
+             <h3>
+               <img src={imageUrl}
+                    className="img-responsive center-block"
+                    alt="Responsive image" />
+             </h3>
+           );
+    }
+    else {
+      return <h3>
+               <img src="img/default_img.gif"
+                  className="img-responsive center-block"
+                  alt="Responsive image" />
+             </h3>;
+    }
+  }
+
   render() {
     return <div className="col-md-5">
 
              <div className="row">
                <div className="single-item">
                  <div>
-                   <h3>
-                     <img src={this.props.product.imagesUrls}
-                          className="img-responsive center-block"
-                          alt="Responsive image" />
-                   </h3>
+                   {this.renderImages()}
                  </div>
                </div>
              </div>

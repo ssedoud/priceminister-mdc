@@ -10,8 +10,16 @@ class ProductBuyBoxComponent extends React.Component {
   renderBestOffer() {
     console.log("renderBestOffer");
 
-    return this.props.product.bestOffers.new.adverts.map((advert) =>
-      <div className="marginTop_15">
+    var buyBoxAdverts = [];
+    if (this.props.product.bestOffers.new != "undefined") {
+      buyBoxAdverts = this.props.product.bestOffers.new;
+    }
+    else if (this.props.product.bestOffers.used != "undefined") {
+      buyBoxAdverts = this.props.product.bestOffers.used;
+    }
+
+    var advert = buyBoxAdverts.adverts[0];
+    return <div className="marginTop_15">
         <span className="price"> {advert.salePrice} € <QualityComponent quality={advert.quality} /> </span>
         &nbsp;&nbsp;<span className="stock"><span className="glyphicon glyphicon-ok"></span>&nbsp;En stock (1)</span>
 
@@ -46,7 +54,7 @@ class ProductBuyBoxComponent extends React.Component {
         <a href ="#"><span className="smallPrice">{this.props.product.newBestPrice} € </span> </a>&nbsp;&nbsp;&nbsp;&nbsp;
         <span className="offerSummary">72 occasions dès </span>
         <a href ="#"><span className="smallPrice">{this.props.product.usedBestPrice} € </span> </a>
-      </div>);
+      </div>;
   }
 
   render() {
