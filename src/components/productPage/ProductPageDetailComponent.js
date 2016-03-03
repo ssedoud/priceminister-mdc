@@ -21,7 +21,7 @@ class ProductPageDetailComponent extends React.Component {
   componentWillMount() {
     var baseUrl = 'http://ws.sse-deb-dev.priceminister.lan/rest/product/v1/get';
 
-    ajax.get(`${baseUrl}?advertType=NEW&productId=${this.props.productId}&channel=hackathon&loadProductDetails=true`)
+    ajax.get(`${baseUrl}?advertType=ALL&productId=${this.props.productId}&channel=hackathon&loadProductDetails=true`)
         .set({
           //'User-Agent': 'HACKATHON Q1.2016',
           'Accept' : 'application/json'
@@ -44,6 +44,8 @@ class ProductPageDetailComponent extends React.Component {
                     "usedBestPrice" : response.body.result.usedBestPrice,
                     "bestOffers" : response.body.result.bestOffers,
                     "nbAdverts" : response.body.result.advertsCount,
+                    "nbNewAdverts" : response.body.result.advertsNewCount,
+                    "nbUsedAdverts" : response.body.result.advertsUsedCount,
                     "adverts" : response.body.result.adverts
                   }
                 });
@@ -66,6 +68,8 @@ class ProductPageDetailComponent extends React.Component {
                     "usedBestPrice" : response.result.usedBestPrice,
                     "bestOffers" : response.result.bestOffers,
                     "nbAdverts" : response.result.advertsCount,
+                    "nbNewAdverts" : response.result.advertsNewCount,
+                    "nbUsedAdverts" : response.result.advertsUsedCount,
                     "adverts" : response.result.adverts
                   }
                 });

@@ -49,9 +49,9 @@ class ProductBuyBoxComponent extends React.Component {
 
         <br /><br />
 
-        <span className="offerSummary"> 21 neufs dès </span>
+        <span className="offerSummary"> {this.props.product.nbNewAdverts} neufs dès </span>
         <a href ="#"><span className="smallPrice">{this.props.product.newBestPrice} € </span> </a>&nbsp;&nbsp;&nbsp;&nbsp;
-        <span className="offerSummary">72 occasions dès </span>
+        <span className="offerSummary">{this.props.product.nbUsedAdverts} occasions dès </span>
         <a href ="#"><span className="smallPrice">{this.props.product.usedBestPrice} € </span> </a>
       </div>;
   }
