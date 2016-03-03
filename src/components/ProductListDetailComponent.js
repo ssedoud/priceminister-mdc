@@ -21,9 +21,10 @@ class ProductListDetailComponent extends React.Component {
                  <div className="col-md-5">
                    <a href = "#" className="title"> {this.props.product.headline}</a>
                    <br/>
-                   <ScoreComponent
-                   score={this.props.product.reviewsAverageNote}
-                   reviewCount={this.props.product.nbReviews}/>
+                   <div>
+                     <ScoreComponent score={this.props.product.reviewsAverageNote}
+                                     reviewCount={this.props.product.nbReviews}/>
+                   </div>
                    <br/>
                    <span className="selling" ><button className="btn btn-default btn-sm">Vendez le vôtre</button><br/><br/></span>
                 </div>

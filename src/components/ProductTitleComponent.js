@@ -1,4 +1,5 @@
 import React from 'react';
+import ScoreComponent from './common/ScoreComponent';
 
 class ProductTitleComponent extends React.Component {
   constructor(props) {
@@ -8,12 +9,8 @@ class ProductTitleComponent extends React.Component {
   render() {
     return <div className="product-title-box">
              <span className="title">{this.props.product.headline}</span>&nbsp;
-             <span className="glyphicon glyphicon-star yellow"> </span>
-             <span className="glyphicon glyphicon-star yellow"> </span>
-             <span className="glyphicon glyphicon-star yellow"> </span>
-             <span className="glyphicon glyphicon-star yellow"> </span>
-             <span className="glyphicon glyphicon-star yellow"> </span>
-             <a href = "#" className = "avis"> ({this.props.product.nbReviews} avis)</a>
+             <ScoreComponent score={this.props.product.reviewsAverageNote}
+                             reviewCount={this.props.product.nbReviews}/>
            </div>
   }
 }

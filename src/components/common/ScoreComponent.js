@@ -17,10 +17,10 @@ class ScoreComponent extends React.Component {
       starList.push(<span className="glyphicon glyphicon-star grey"> </span>);
     }
 
-    var reviewTag = this.props.reviewCount === 0 ? 'Donnez votre avis' :
-                              <a href className = "avis"> ({this.props.reviewCount} avis)</a> ;
+    var reviewTag = this.props.reviewCount === 0 ? 'Donnez votre avis'
+                                                 : <a href="#" className="avis"> ({this.props.reviewCount} avis)</a> ;
 
-    return <div> {starList} {reviewTag} </div>;
+    return <span> {starList} {reviewTag} </span>;
   }
 }
 
